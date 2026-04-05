@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ukvqghjix0js"]
+
+[ext_resource type="PackedScene" uid="uid://3yy4b5lfgri4" path="res://scenes/player_prac.tscn" id="1_m80dl"]
+[ext_resource type="Script" path="res://scripts/player_prac.gd" id="2_8meys"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v2ls6"]
+
+[node name="practice" type="Node"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_m80dl")]
+position = Vector2(203, 128)
+script = ExtResource("2_8meys")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(1, 5)
+zoom = Vector2(4, 4)
+
+[node name="world boundary_prac" type="Area2D" parent="."]
+position = Vector2(-1, 1)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world boundary_prac"]
+position = Vector2(202, 178)
+shape = SubResource("WorldBoundaryShape2D_v2ls6")
