@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6qfxx4vdv12d"]
+
+[ext_resource type="Script" path="res://scripts/test_tcp.gd" id="1_3bc3p"]
+
+[node name="Game_manager" type="Node2D"]
+
+[node name="tcp_test" type="Node" parent="."]
+script = ExtResource("1_3bc3p")
